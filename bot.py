@@ -1,9 +1,11 @@
 import yfinance as yf
 import requests
 from datetime import datetime
+import os
 
-TELEGRAM_TOKEN = "8522186731:AAFm1b2B7WyKqEuiy40KocHRlvTGzs6lA_w"
-CHAT_ID = "1730389151"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
+
 
 STOCKS = {
     "NVDA": {"buy_drop": -5, "sell_gain": 25},
